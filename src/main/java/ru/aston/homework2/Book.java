@@ -7,17 +7,19 @@ public class Book {
     private int year;
     private int pages;
 
-    public Book (String title, int year, int pages) {
+    public Book(String title, int year, int pages) {
         this.title = title;
         this.year = year;
         this.pages = pages;
     }
 
-    public Book() {}
+    public Book() {
+    }
 
     public String getTitle() {
         return title;
     }
+
     public void setTitle(String title) {
         this.title = title;
     }
@@ -25,6 +27,7 @@ public class Book {
     public int getYear() {
         return year;
     }
+
     public void setYear(int year) {
         this.year = year;
     }
@@ -32,6 +35,7 @@ public class Book {
     public int getPages() {
         return pages;
     }
+
     public void setPages(int pages) {
         this.pages = pages;
     }
@@ -47,6 +51,7 @@ public class Book {
 
     @Override
     public boolean equals(Object o) {
+        if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         Book book = (Book) o;
         return year == book.year && pages == book.pages && Objects.equals(title, book.title);
